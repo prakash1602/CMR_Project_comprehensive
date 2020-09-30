@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'accounts/cdnlines.html' %}
+    <title>Title</title>
+</head>
+<body>
+ <div class="container-fluid">
+     <div class="row">
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header bg-success text-white">
+                   <h1>Total No Orders</h1>
+                </div>
+                <div class="card-body">
+                     <h4>{{ total_orders }}</h4>
+                </div>
+                <div class="card-footer text-center bg-warning">
+                    <h5>Thank You</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header bg-danger text-white">
+                   <h1>Pending Orders</h1>
+                </div>
+                <div class="card-body">
+                    <h4 >{{  pending_orders }}</h4>
+                </div>
+                <div class="card-footer text-center bg-warning">
+                     <h5>Thank You</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header bg-primary text-white">
+                   <h1> Delivered Orders</h1>
+                </div>
+                <div class="card-body">
+                     <h4>{{ delivered_order }}</h4>
+                </div>
+                <div class="card-footer text-center bg-warning">
+                       <h5>Thank You</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card text-center">
+                 <div class="card-header bg-dark text-white">
+                    <h1>Out for Delivery</h1>
+                 </div>
+                 <div class="card-body">
+                     <h4>{{ out_for_delivery }}</h4>
+                 </div>
+                <div class="card-footer text-center bg-warning">
+                       <h5>Thank You</h5>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>
+</body>
+</html>
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#  <meta charset="UTF-8">#}
+{#  {% include 'accounts/cdnlines.html' %}#}
+{#  <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#<div class="container-fluid">#}
+{#    <div class="row">#}
+{#        <div class="col-md">#}
+{#            <div class="card text-center">#}
+{#                <div class="card-header bg-success text-white">#}
+{#                    <h4>Total Orders</h4>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <h1>10</h1>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="col-md">#}
+{#            <div class="card text-center">#}
+{#                <div class="card-header bg-danger text-white">#}
+{#                    <h4>Pending Orders</h4>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <h1>10</h1>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="col-md">#}
+{#            <div class="card text-center">#}
+{#                <div class="card-header bg-primary text-white">#}
+{#                    <h4>Delivered Orders</h4>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <h1>10</h1>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="col-md">#}
+{#        <div class="card text-center">#}
+{#            <div class="card-header bg-dark text-white">#}
+{#                <h4>OutForDelivery</h4>#}
+{#            </div>#}
+{#            <div class="card-body">#}
+{#                <h1>10</h1>#}
+{#            </div>#}
+{#        </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#</body>#}
+{#</html>#}

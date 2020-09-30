@@ -1,0 +1,80 @@
+{#{% extends 'accounts/base.html' %}#}
+{##}
+{#{% block content %}#}
+{#<h1>Product Name</h1>#}
+{#{% endblock %}#}
+{% extends 'accounts/base.html' %}
+<html>
+<head>
+    <title>PRODUCT</title>
+</head>
+<body>
+{% block content %}
+{# <h2 class="text-center bg-primary text-white">{{ customer.first_name | capfirst }}Details</h2>#}
+{# <div class="container-fluid">#}
+{# <div class="row">#}
+{#     <div class="col-md-3">#}
+{#         <div class="card">#}
+{#             <div class="card-header bg-success text-white text-center ">#}
+{#                 <h3>Contact Data</h3>#}
+{#             </div>#}
+{#             <div class="card-body">#}
+{#                 <h4>Name:&emsp; &ensp;{{ customer.first_name }}</h4>#}
+{#                 <h4>Mobile:&ensp;&ensp;  {{ customer.mobile }}</h4>#}
+{#                 <h4>Email:&ensp;{{ customer.email }}</h4>#}
+{#                 <h4>Location:&ensp;{{ customer.location }}</h4>#}
+{#             </div>#}
+{#         </div>#}
+{#     </div>#}
+{#     <div class="col-md-12">#}
+{#         <div class="card">#}
+{#             <div class="card-header bg-success text-white text-center">#}
+{#                 <h4>Order Status</h4>#}
+{#             </div>#}
+{#             <div class="card-body">#}
+{#                 {% include "accounts/status.html" %}#}
+{#             </div>#}
+{#         </div>#}
+{#     </div>#}
+{# </div>#}
+{# </div>#}
+{#    <div class="container-fluid">#}
+{#       <div class="row">#}
+         <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-success text-center text-white">
+                    <h4>Orders</h4>
+                </div>
+                <div class="body">
+                    <table class="table table-bordered text-center table-hover">
+                        <thead class="bg-warning">
+                          <tr>
+                            <th>Created Date</th>
+                            <th>Status</th>
+                            <th>Email ID</th>
+{#                            <th>Order Date</th>#}
+{#                            <th>Category</th>#}
+{#                            <th>Status</th>#}
+                           </tr>
+                        </thead>
+                        <tbody class="bg-dark text-white">
+                           {% for order in orders %}
+                             <tr>
+                               <td>{{ order.created_date }}</td>
+                               <td>{{ order.status }}</td>
+                               <td>{{ order.customer.email }}</td>
+{#                               <td>{{ product.order_date }}</td>#}
+{#                               <td>{{ product.category }}</td>#}
+{#                               <td>{{ product.order.status }}</td>#}
+                             </tr>
+                           {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+         </div>
+{#       </div>#}
+{#    </div>#}
+{% endblock %}
+</body>
+</html>
